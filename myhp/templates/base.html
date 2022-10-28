@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    <title>myhp</title>
+</head>
+<body>
+    <div class="header">
+        <div class="title">
+            <h1 class="my">My</h1>
+            <h1 class="lab">Lab</h1>
+        </div>
+        <div class="disc">
+            <h3>Development materials and reading logs</h3>
+            <h3>written by a Japanese student majoring in finance.</h3>
+        </div>
+        <div class="contents-list">
+            <ul class="genres">
+                <li class="genre1"><a href="/contents/dev/index">DEV</a></li>
+                <li class="genre2"><a href="/contents/rls/index">RLs</a></li>
+                <li class="genre3"><a href="/contents/apis/index">API links</a></li>
+            </ul>
+        </div>
+        <div class="links">
+            <div class="github">
+                <a href="https://github.com/shion24hub" target="_blank" rel="noopener noreferrer"><img src="../../static/images/github.jpg" alt="github-icon" width="5%" height="5%"></a>
+            </div>
+        </div>
+    </div>
+    <div class="main-contents">
+        {% block main %}
+        {% endblock %}
+    </div>
+
+    <div class="footer">
+        <div class="sign">
+            <p class="sign">this page is written by Shion N.</p>
+        </div>
+    </div>
+</body>
+</html>
